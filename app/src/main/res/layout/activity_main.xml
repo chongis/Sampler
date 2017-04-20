@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0e7df"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/main1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:padding="16dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="La Casa De Bistro"
+                android:textStyle="italic"
+                android:textSize="32dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_below="@+id/title"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logo"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/info"
+                android:paddingTop="16dp"
+                android:layout_centerHorizontal="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                android:text="About Us"/>
+
+            <TextView
+                android:layout_below="@+id/info"
+                android:padding="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="Test info"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/dishes"
+                android:paddingTop="16dp"
+                android:layout_centerHorizontal="false"
+                android:layout_width="wrap_content"
+                android:textSize="26dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Dishes"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/leg"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/dishes">
+                <TextView
+                    android:id="@+id/legs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="italic"
+                    android:textSize="18dp"
+                    android:text="Piernas de Rana" />
+
+                <ImageView
+                    android:id="@+id/legsimg"
+                    android:layout_below="@+id/dishes"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="0dp"
+                    android:src="@drawable/legs"/>
+
+                <TextView
+                    android:id="@+id/legsppu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:text="Price Per Unit: $12.75"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/legs"/>
+
+                <TextView
+                    android:id="@+id/legsc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Cost:"
+                    android:paddingLeft="16dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/legsppu"
+                    android:layout_alignParentRight="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/legsc"
+                    android:paddingLeft="55dp"
+                    android:paddingTop="26dp"
+                    android:text ="$0"
+                    android:textSize="30dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/legsimg"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentRight="false"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:background="#FFFFFF"
+                        android:text="0"
+                        android:textSize="26dp"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="+"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/leg"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello"
+                    android:textSize="40sp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/total"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="16dp"
+                android:textSize="26dp"
+                android:layout_centerHorizontal="false"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Total"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/m"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
