@@ -12,6 +12,8 @@ import android.view.LayoutInflater;
 import android.widget.LinearLayout.LayoutParams;
 
 public class MainActivity extends AppCompatActivity {
+    int legs = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,13 @@ public class MainActivity extends AppCompatActivity {
 // insert into main view
         ViewGroup insertPoint = (ViewGroup) findViewById(R.id.m);
         insertPoint.addView(v, 0, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.FILL_PARENT));
+
+    }
+    private void displayQuantity(View view) {
+        String IdAsString = view.getResources().getResourceName(view.getId());
+        //TextView quantityTextView = IdAsString;
+        //TextView quantityTextView = (TextView) findViewById(R.id.IdAsString);
+        view.getId().setText("" + 2);
 
     }
 }
