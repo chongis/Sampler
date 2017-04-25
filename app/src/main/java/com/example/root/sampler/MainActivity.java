@@ -11,8 +11,12 @@ import android.view.ViewGroup;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout.LayoutParams;
 
+import java.util.HashMap;
+import java.util.Map;
+
+
 public class MainActivity extends AppCompatActivity {
-    int legs = 5;
+
 
 
     @Override
@@ -44,22 +48,50 @@ public class MainActivity extends AppCompatActivity {
     }
     public void decrease(View view) {
         String IdAsString = view.getResources().getResourceName(view.getId());
+        int len = IdAsString.length();
+        String temp = IdAsString.substring(0, (len-3));
 
-        if (IdAsString == "com.example.root.sampler:id/legsdec") {
-            if (legs > 0){
-                legs -= 1;
-            }
-            TextView quantityTextView = (TextView) findViewById(R.id.legsnum);
-            quantityTextView.setText("" + legs);
+        String numberItems = temp + "num";
+        String totalCost = temp +"cost";
+        String ppuString = temp +"ppu";
 
-        }
+        int ppu = getResources().getIdentifier(ppuString, "id", getPackageName());
+        int nItems = getResources().getIdentifier(numberItems, "id", getPackageName());
+        int tCost = getResources().getIdentifier(totalCost, "id", getPackageName());
+
+        TextView ppuview = (TextView) findViewById(ppu);
+        TextView cost = (TextView) findViewById(tCost);
+        TextView quantity = (TextView) findViewById(nItems);
+
+        String ppuS = ppuview.getText().toString();
+        String[] fi = ppuS.split(" ");
+        int lent = fi.length;
+        double ppuf = Double.parseDouble(fi[(lent-1)].substring(1, fi[(lent-1)].length()));
+
+        String prev = quantity.getText().toString();
+        prev = prev.replace("\n","");
+        prev = prev.replace(" ","");
+        int previ = Integer.valueOf(prev);
+        previ += 1;
+        double costnow = (double) previ * ppuf;
+        String thenew = Integer.toString(previ);
+        quantity.setText(thenew);
+        cost.setText("$" + Double.toString(costnow));
+
+        //if (IdAsString == "com.example.root.sampler:id/legsdec") {
+        //    if (legs > 0){
+        //        legs -= 1;
+        //    }
+        //    TextView quantityTextView = (TextView) findViewById(R.id.legsnum);
+        //    quantityTextView.setText("" + legs);
+        //}
 
 
 
 
     }
     public void increase(View view) {
-        legs += 1;
+        //legs += 1;
 
     }
     private void displayQuantity(View view) {
