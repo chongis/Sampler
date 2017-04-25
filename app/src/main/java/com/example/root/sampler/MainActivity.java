@@ -42,9 +42,10 @@ public class MainActivity extends AppCompatActivity {
         insertPoint.addView(v, 0, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.FILL_PARENT));
 
     }
-    private void decrease(View view) {
+    public void decrease(View view) {
         String IdAsString = view.getResources().getResourceName(view.getId());
-        if (IdAsString == "legsdec") {
+
+        if (IdAsString == "com.example.root.sampler:id/legsdec") {
             if (legs > 0){
                 legs -= 1;
             }
@@ -55,8 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     }
-    private void increase(View view) {
+    public void increase(View view) {
         legs += 1;
 
     }
