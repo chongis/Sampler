@@ -103,7 +103,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="16dp"
-                    android:text="Price Per Unit: $12.75"
+                    android:text="Price Per Unit: $6.25"
                     android:layout_alignParentLeft="true"
                     android:layout_below="@+id/legs"/>
 
@@ -122,7 +122,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/legsc"
-                    android:paddingLeft="55dp"
+                    android:paddingLeft="45dp"
                     android:paddingTop="26dp"
                     android:text ="$0"
                     android:textSize="30dp"/>
@@ -134,7 +134,8 @@
                     android:layout_alignParentEnd="false"
                     android:layout_alignParentRight="false"
                     android:layout_centerHorizontal="true"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:padding="16dp">
                     <Button
                         android:id="@+id/legsdec"
                         android:layout_width="wrap_content"
@@ -164,38 +165,258 @@
 
                 </LinearLayout>
             </RelativeLayout>
-            <RelativeLayout
+        </RelativeLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/burgercat"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/burger"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/leg"
-                >
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="italic"
+                android:textSize="18dp"
+                android:text="Hamburgesa de Rana" />
+
+            <ImageView
+                android:id="@+id/burgerimg"
+                android:layout_below="@+id/burgercat"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_alignParentRight="true"
+                android:padding="0dp"
+                android:src="@drawable/burger"/>
+
+            <TextView
+                android:id="@+id/burgerppu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:text="Price Per Unit: $10.15"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/burger"/>
+
+            <TextView
+                android:id="@+id/burgerc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Cost:"
+                android:paddingLeft="16dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/burgerppu"
+                android:layout_alignParentRight="false"/>
+
+            <TextView
+                android:id="@+id/burgercost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/burgerc"
+                android:paddingLeft="45dp"
+                android:paddingTop="26dp"
+                android:text ="$0"
+                android:textSize="30dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/burgerimg"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="false"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:padding="16dp">
+                <Button
+                    android:id="@+id/burgerdec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="decrease"
+                    android:text="-"/>
                 <TextView
+                    android:id="@+id/burgernum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hello"
-                    android:textSize="40sp"/>
-            </RelativeLayout>
+                    android:layout_weight="2"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="0dp"
+                    android:paddingTop="0dp"
+                    android:background="#FFFFFF"
+                    android:text="0"
+                    android:textSize="26dp"/>
+                <Button
+                    android:id="@+id/burgerinc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="increase"
+                    android:text="+"/>
+
+            </LinearLayout>
         </RelativeLayout>
+
+
+
         <RelativeLayout
-            android:id="@+id/total"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:id="@+id/lingcat"
+            android:layout_height="match_parent"
+            android:paddingTop="30dp">
+
+
+
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/ling"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:textSize="26dp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="italic"
+                android:textSize="18dp"
+                android:text="Linguine de Rana" />
+
+            <ImageView
+                android:id="@+id/lingimg"
+                android:layout_below="@+id/lingcat"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_alignParentRight="true"
+                android:padding="0dp"
+                android:src="@drawable/ling"/>
+
+            <TextView
+                android:id="@+id/lingppu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:text="Price Per Unit: $15.75"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/ling"/>
+
+            <TextView
+                android:id="@+id/lingc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Cost:"
+                android:paddingLeft="16dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/lingppu"
+                android:layout_alignParentRight="false"/>
+
+            <TextView
+                android:id="@+id/lingcost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lingc"
+                android:paddingLeft="45dp"
+                android:paddingTop="26dp"
+                android:text ="$0"
+                android:textSize="30dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lingimg"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="false"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:padding="16dp">
+                <Button
+                    android:id="@+id/lingdec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="decrease"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/lingnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="0dp"
+                    android:paddingTop="0dp"
+                    android:background="#FFFFFF"
+                    android:text="0"
+                    android:textSize="26dp"/>
+                <Button
+                    android:id="@+id/linginc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="increase"
+                    android:text="+"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/total"
+                android:paddingTop="16dp"
                 android:layout_centerHorizontal="false"
+                android:layout_width="wrap_content"
+                android:textSize="26dp"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:text="Total"/>
-        </RelativeLayout>
-        <LinearLayout
-            android:id="@+id/m"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/totalprice"
+                android:layout_below="@+id/total"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
 
-        </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+
+
+
+
+
     </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </ScrollView>
