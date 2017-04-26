@@ -1,6 +1,8 @@
 package com.example.root.sampler;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -14,10 +16,12 @@ import android.widget.LinearLayout.LayoutParams;
 import java.util.Formatter;
 import java.util.HashMap;
 import java.util.Map;
+import com.example.root.sampler.FullscreenActivity;
 
 
 public class MainActivity extends AppCompatActivity {
     String[] tosend = new String[3];
+
 
 
     @Override
@@ -39,6 +43,32 @@ public class MainActivity extends AppCompatActivity {
         //insertPoint.addView(v, 0, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.FILL_PARENT));
 
     }
+
+    public void viewfull (View view) {
+        setContentView(R.layout.activity_fullscreen);
+    }
+
+    public void submit(View view){
+        String end = "";
+        for (int o = 0; o < tosend.length; o++){
+            end += tosend[0] + '\n';
+        }
+        composeEmail(end);
+
+    }
+
+    public void composeEmail(String end) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_EMAIL, "fponce1@uci.edu");
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Order");
+        intent.putExtra(Intent.EXTRA_TEXT, end);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
+
+
     public void decrease(View view) {
         String IdAsString = view.getResources().getResourceName(view.getId());
         int len = IdAsString.length();
@@ -209,6 +239,18 @@ public class MainActivity extends AppCompatActivity {
         ftotal.setPadding(25,25,25,25);
         ftotal.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
         ll.addView(ftotal);
+
+        Button submit1 = new Button(this);
+        submit1.setTextSize(26);
+        submit1.setText("Submit Order");
+        submit1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                submit(v);
+            }
+        });
+        ll.addView(submit1);
+
 
 
 
