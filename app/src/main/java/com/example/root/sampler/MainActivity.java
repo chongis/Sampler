@@ -20,7 +20,7 @@ import com.example.root.sampler.FullscreenActivity;
 
 
 public class MainActivity extends AppCompatActivity {
-    String[] tosend = new String[3];
+    String[] tosend = new String[4];
 
 
 
@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
         //TextView quantityTextView = IdAsString;
         //TextView quantityTextView = (TextView) findViewById(R.id.IdAsString);
         //view.getId().setText("" + 2);
-        String[] items = {"legs","burger","ling"};
+        String[] items = {"legs","burger","ling","water"};
 
         double finaltotal = 0;
 

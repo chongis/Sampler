@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Sampler</string>
-
+    <string name="info">Hello and Welcome to our house of Bistro! We are family founded restaurant originally operating in the southern area of Louisianna. Our menu items are specifically crafted to use exotic meats not used (legally) in other restaurants. In our long 50 year history we have served over 30 miles worth of frog legs to our customers and have never received any complaints. </string>
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
