@@ -44,14 +44,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void viewfull (View view) {
-        setContentView(R.layout.activity_fullscreen);
-    }
+
 
     public void submit(View view){
         String end = "";
         for (int o = 0; o < tosend.length; o++){
-            end += tosend[0] + '\n';
+            end += tosend[o] + '\n';
         }
         composeEmail(end);
 
@@ -172,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
         ll.setOrientation(LinearLayout.VERTICAL);
         // add text view
 
-        for (int c = 0;c < 3 ; c++) {
+        for (int c = 0;c < tosend.length ; c++) {
             TextView tv = new TextView(this);
             String IdAsString = "com.example.root.sampler:id/";
             String temp = IdAsString + items[c];
@@ -212,7 +210,8 @@ public class MainActivity extends AppCompatActivity {
             Formatter fmt2 = new Formatter();
             fmt2.format("%.2f", ppuf);
 
-            String temp2 = nameof +": " + thenew + " x $"+ fmt2 + " = $" + fmt;
+            String temp2 = nameof +": " + prev + " x $"+ fmt2 + " = $" + fmt + " " ;
+
             tosend[c] = temp2;
 
             tv.setText(temp2);

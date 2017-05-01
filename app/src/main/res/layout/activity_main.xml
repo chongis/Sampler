@@ -193,8 +193,7 @@
                 android:layout_height="180dp"
                 android:layout_alignParentRight="true"
                 android:padding="0dp"
-                android:src="@drawable/burger"
-                android:onClick="viewfull"/>
+                android:src="@drawable/burger" />
 
             <TextView
                 android:id="@+id/burgerppu"
@@ -359,6 +358,113 @@
                     android:text="+"/>
 
             </LinearLayout>
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/drinks"
+                android:paddingTop="16dp"
+                android:layout_centerHorizontal="false"
+                android:layout_width="wrap_content"
+                android:textSize="26dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Drinks"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/watercat"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/drinks">
+                <TextView
+                    android:id="@+id/water"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="italic"
+                    android:textSize="18dp"
+                    android:text="Agua de Lago" />
+
+                <ImageView
+                    android:id="@+id/waterimg"
+                    android:layout_below="@+id/water"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="0dp"
+                    android:src="@drawable/water"/>
+
+                <TextView
+                    android:id="@+id/waterppu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:text="Price Per Unit: $6.25"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/water"/>
+
+                <TextView
+                    android:id="@+id/waterc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Cost:"
+                    android:paddingLeft="16dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/waterppu"
+                    android:layout_alignParentRight="false"/>
+
+                <TextView
+                    android:id="@+id/watercost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/waterc"
+                    android:paddingLeft="45dp"
+                    android:paddingTop="26dp"
+                    android:text ="$0"
+                    android:textSize="30dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/waterimg"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentRight="false"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+                    <Button
+                        android:id="@+id/waterdec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:onClick="decrease"
+                        android:text="-"/>
+                    <TextView
+                        android:id="@+id/waternum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:background="#FFFFFF"
+                        android:text="0"
+                        android:textSize="26dp"/>
+                    <Button
+                        android:id="@+id/waterinc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:onClick="increase"
+                        android:text="+"/>
+
+                </LinearLayout>
+            </RelativeLayout>
         </RelativeLayout>
 
 
